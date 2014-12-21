@@ -1,0 +1,44 @@
+Codebook
+========
+
+In this codebook, we will take a brief look into the tidy dataset that we generate in this project.
+
+Input data
+----------
+The program used the following files to generate the final tidy data.
+* ../train/X_train.txt
+* ../test/X_test.txt
+* ../train/y_train.txt
+* ../test/y_train.txt
+* ../test/subject_test.txt
+* ../train/subject_train.txt
+* activity_labels.txt
+* features.txt
+
+They are available at:
+`https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip`.
+
+Data Cleaning
+-------------
+In the data cleaning process, we did the fellowing 5 steps to get our final tidy dataset.
+For more information you can check the R code of this part at 'run_analysis.R'
+
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+Dataset structure
+-----------------
+
+```{r}
+str(tidy_data)
+```
+
+Summary of variables
+--------------------
+
+```{r}
+summary(tidy_data)
+```
