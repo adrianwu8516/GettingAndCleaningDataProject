@@ -50,7 +50,15 @@ setnames(data, names(data), c(key(data), features$featureName))
 
 # Aggregrate data and generate the tidy_data
 tidy_data <- aggregate(data, by=list(data$subject, data$activity), FUN=mean)
-tidy_data$activity <- NULL
+tidy_data$activitycode <- NULL
 tidy_data$subject <- NULL
 names(tidy_data)[names(tidy_data) == 'Group.1'] <- 'subject'
 names(tidy_data)[names(tidy_data) == 'Group.2'] <- 'activity'
+
+write.csv(tidy_data, file = "tidy_data.csv")
+
+# Build a codebook using knitr and the file "codebook.Rmd"
+'''
+library(knitr)
+knitr::knit2html("codebook.Rmd")
+'''
