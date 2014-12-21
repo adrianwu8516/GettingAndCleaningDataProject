@@ -30,5 +30,5 @@ Execute the script `run_analysis.R` from repository directory.
 Generated output
 ----------------
 
-After successful execution script should create the `tidy_data.csv` file.
+After successful execution script should create the `tidy_data.txt` file.
 Which shows the tidy data as per instructions (average of each variable for each activity and each subject).

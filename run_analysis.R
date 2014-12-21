@@ -55,7 +55,7 @@ tidy_data$subject <- NULL
 names(tidy_data)[names(tidy_data) == 'Group.1'] <- 'subject'
 names(tidy_data)[names(tidy_data) == 'Group.2'] <- 'activity'
 
-write.csv(tidy_data, file = "tidy_data.csv")
+write.table(tidy_data, file = "tidy_data.txt", row.name = FALSE)
 
 # Build a codebook using knitr and the file "codebook.Rmd"
 '''
